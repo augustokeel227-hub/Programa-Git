@@ -1,0 +1,9 @@
+CATGAMERROCK - EV04
+
+Ejecución:
+1. Descomprime el ZIP.
+2. Entra a la carpeta CatGamerRock_EV04.
+3. Haz doble clic en index.html.
+4. Se abrirá en Chrome.
+
+No necesita Android Studio, MongoDB ni servidor. Es un prototipo web local HTML/CSS/JavaScript.

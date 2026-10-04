@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CatGamerRock</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#080808;color:#fff}header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 6%;background:#080808;border-bottom:1px solid #542080}.logo{font-size:25px;font-weight:700}.logo span,h1 span,h2 span{color:#b66cff}nav{display:flex;gap:7px;flex-wrap:wrap}button{border:0;border-radius:9px;padding:11px 15px;background:transparent;color:#fff;cursor:pointer}nav button:hover,nav button.active,.primary{background:#8b2cff}.page{display:none;min-height:calc(100vh - 75px)}.page.active{display:block}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:40px 20px;background:radial-gradient(circle,#30105f,#080808 62%)}.hero>div{max-width:850px}.cat{width:220px;height:220px;margin:auto auto 25px;display:grid;place-items:center;border-radius:50%;font-size:135px;background:#ffc928;border:7px solid #8b2cff;box-shadow:0 0 35px #8b2cff}.hero h1{font-size:clamp(42px,8vw,80px);margin:10px 0}.slogan{letter-spacing:4px;color:#ccc}.hero p{max-width:650px;margin:25px auto;line-height:1.7;color:#ccc}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.container{width:90%;max-width:1150px;margin:auto;padding:55px 0}.title{text-align:center;margin-bottom:40px}.title h2{font-size:38px;margin:0 0 10px}.title p{color:#aaa}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{padding:28px;border:1px solid #39204d;border-radius:17px;background:#131313;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#8b2cff}.icon{font-size:36px;margin-bottom:15px}.card p{color:#aaa;line-height:1.6}.login{min-height:88vh;display:grid;place-items:center;padding:25px}.box{width:min(450px,100%);padding:35px;background:#111;border:1px solid #49226b;border-radius:18px}.box input{width:100%;padding:14px;margin:8px 0 18px;background:#1b1b1b;color:#fff;border:1px solid #444;border-radius:8px}.box .primary{width:100%}.profile{max-width:800px;margin:auto}.avatar{width:135px;height:135px;margin:auto  auto 20px;display:grid;place-items:center;border-radius:50%;font-size:80px;background:#ffc928;border:5px solid #8b2cff}.profile-head{text-align:center;margin-bottom:30px}.rows{background:#131313;border:1px solid #39204d;border-radius:15px;overflow:hidden}.row,.setting{display:flex;justify-content:space-between;gap:20px;padding:18px;border-bottom:1px solid #292929}.row:last-child,.setting:last-child{border-bottom:0}.row span,.setting p{color:#999}.setting{background:#131313}.setting p{margin:6px 0 0}.switch{width:50px;height:27px;border-radius:20px;background:#444;position:relative;flex:none}.switch:after{content:"";position:absolute;width:21px;height:21px;top:3px;left:4px;background:#fff;border-radius:50%;transition:.2s}.switch.on{background:#8b2cff}.switch.on:after{left:25px}footer{text-align:center;padding:28px;color:#777;border-top:1px solid #292929}footer strong{color:#b66cff}@media(max-width:700px){header{flex-direction:column}.cat{width:170px;height:170px;font-size:105px}.row,.setting{flex-direction:column}.row strong{overflow-wrap:anywhere}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🐱 Cat<span>Gamer</span>Rock</div>
+<nav>
+<button class="active" onclick="show('inicio',this)">Inicio</button>
+<button onclick="show('juegos',this)">🎮 Juegos</button>
+<button onclick="show('musica',this)">🎸 Música</button>
+<button onclick="show('perfil',this)">👤 Perfil</button>
+<button onclick="show('ajustes',this)">⚙️ Ajustes</button>
+</nav>
+</header>
+
+<section id="inicio" class="page active"><div class="hero"><div>
+<div class="cat">🐱</div><h1>Cat<span>Gamer</span>Rock</h1><div class="slogan">JUEGA • ESCUCHA • DISFRUTA</div>
+<p>Una experiencia para quienes disfrutan de los videojuegos, la música rock y una comunidad con personalidad.</p>
+<div class="actions"><button class="primary" onclick="show('juegos')">🎮 Comenzar</button><button onclick="show('login')">🔐 Iniciar sesión</button></div>
+</div></div></section>
+
+<section id="login" class="page"><div class="login"><div class="box"><h2>Bienvenido</h2><p style="color:#999">Ingresa a CatGamerRock para continuar.</p><label>Correo electrónico</label><input id="email" type="email" placeholder="usuario@correo.com"><label>Contraseña</label><input id="password" type="password" placeholder="••••••••"><button class="primary" onclick="login()">Ingresar</button><p style="text-align:center;color:#aaa;cursor:pointer" onclick="alert('Función de recuperación de contraseña')">¿Olvidó su contraseña?</p></div></div></section>
+
+<section id="juegos" class="page"><div class="container"><div class="title"><h2>Zona <span>Gamer</span></h2><p>Contenido relacionado con videojuegos.</p></div><div class="cards">
+<div class="card"><div class="icon">🎮</div><h3>Acción</h3><p>Aventura, combate y desafíos.</p></div>
+<div class="card"><div class="icon">🧙</div><h3>RPG</h3><p>Historias, personajes y mundos para explorar.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>Shooter</h3><p>Experiencias competitivas llenas de acción.</p></div>
+<div class="card"><div class="icon">🏎️</div><h3>Carreras</h3><p>Velocidad, vehículos y competencia.</p></div>
+</div></div></section>
+
+<section id="musica" class="page"><div class="container"><div class="title"><h2>Mundo <span>Rock</span></h2><p>Música para acompañar tus sesiones de juego.</p></div><div class="cards">
+<div class="card"><div class="icon">🎸</div><h3>Rock</h3><p>Clásicos y nuevos sonidos del rock.</p></div>
+<div class="card"><div class="icon">🤘</div><h3>Metal</h3><p>Sonidos fuertes para momentos intensos.</p></div>
+<div class="card"><div class="icon">🎤</div><h3>Alternativo</h3><p>Diferentes estilos y artistas.</p></div>
+</div></div></section>
+
+<section id="perfil" class="page"><div class="container"><div class="profile"><div class="profile-head"><div class="avatar">🐱</div><h2>GamerCat</h2><p style="color:#b66cff">⭐ Nivel 15</p></div><div class="rows">
+<div class="row"><span>Correo electrónico</span><strong>gamercat@catgamerrock.com</strong></div>
+<div class="row"><span>Nombre de usuario</span><strong>GamerCat</strong></div>
+<div class="row"><span>Miembro desde</span><strong>Marzo 2024</strong></div>
+<div class="row"><span>Preferencias</span><strong>Videojuegos y música rock</strong></div>
+</div><div class="actions" style="margin-top:25px"><button class="primary" onclick="alert('Edición de perfil')">✏️ Editar perfil</button></div></div></div></section>
+
+<section id="ajustes" class="page"><div class="container"><div class="title"><h2><span>Ajustes</span></h2><p>Personaliza tu experiencia.</p></div>
+<div class="setting"><div><strong>Notificaciones</strong><p>Recibir novedades y noticias.</p></div><div class="switch on" onclick="this.classList.toggle('on')"></div></div>
+<div class="setting"><div><strong>Preferencias de contenido</strong><p>Personalizar juegos y música.</p></div><div class="switch on" onclick="this.classList.toggle('on')"></div></div>
+<div class="setting"><div><strong>Tema oscuro</strong><p>Utilizar la apariencia oscura.</p></div><div class="switch on" onclick="this.classList.toggle('on')"></div></div>
+<div class="setting"><div><strong>Accesibilidad</strong><p>Opciones para facilitar el uso.</p></div><div>♿</div></div>
+</div></section>
+
+<footer><strong>CatGamerRock</strong><br><br>Juega • Escucha • Disfruta<br><br>Prototipo web desarrollado en HTML, CSS y JavaScript.</footer>
+
+<script>
+function show(id,btn){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+if(btn)btn.classList.add('active');
+scrollTo({top:0,behavior:'smooth'});
+}
+function login(){
+let e=document.getElementById('email').value,p=document.getElementById('password').value;
+if(!e||!p){alert('Por favor complete el correo y la contraseña.');return}
+alert('Inicio de sesión realizado correctamente.');
+show('juegos');
+}
+</script>
+</body>
+</html>
